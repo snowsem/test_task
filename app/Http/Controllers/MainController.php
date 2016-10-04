@@ -15,7 +15,7 @@ class MainController extends Controller
         return response()->json(
             array('data'=>
                 ['items'=>$itemsAll->toArray()['data'],
-                'pagination' => [
+
                     'count'        => $itemsAll->Total(), // count all record
                     //'per_page'     => $itemsAll->PerPage(),
                     'page'         => $itemsAll->CurrentPage(),
@@ -23,7 +23,7 @@ class MainController extends Controller
                     'pages'        => $itemsAll->LastPage(),
                     //'to'           => $itemsAll->LastPage()
                 ]
-                ]
+
             )
         );
     }
