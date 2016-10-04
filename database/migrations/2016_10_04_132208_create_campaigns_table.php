@@ -14,15 +14,15 @@ class CreateCampaignsTable extends Migration
     {
         Schema::create('campaigns', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->integer('gameId');
-            $table->date('startDate');
-            $table->integer('timeActive');
-            $table->integer('registeredPlayers');
-            $table->integer('registeredCodes');
-            $table->integer('prisesGiven');
-            $table->integer('playersLimit');
-            $table->string('state');
+            $table->string('title')->nullable();
+            $table->integer('gameId')->nullable();
+            $table->date('startDate')->nullable();
+            $table->integer('timeActive')->nullable();
+            $table->integer('registeredPlayers')->nullable();
+            $table->integer('registeredCodes')->nullable();
+            $table->integer('prisesGiven')->nullable();
+            $table->integer('playersLimit')->nullable();
+            $table->string('state')->nullable();
 
             $table->timestamps();
         });

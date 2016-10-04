@@ -14,6 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('campaigns', function (){
-    return response()->json(array('a'=>'aa'));
-});
+
+Route::get('campaigns', 'MainController@campaigns');
