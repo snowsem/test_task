@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('campaigns', 'MainController@campaigns');
+
+Route::group(['prefix' => 'api/v1'], function () {
+    Route::get('campaigns', '\App\Api\V1\MainController@campaigns');
+});
